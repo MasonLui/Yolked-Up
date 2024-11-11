@@ -1,8 +1,11 @@
-# React + Vite
+# Yulked-up
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Yulked-Up – your go-to workout platform for organizing and tracking your fitness journey! With Yulked-Up, you can efficiently plan your daily workouts, discover new exercises, and stay motivated through our community blog. 
 
-Currently, two official plugins are available:
+# Features
+- Personalized Workout Planning: Organize your daily workouts by selecting exercises from our extensive library or by adding custom - - workouts.
+- Exercise Search Function: Easily search for exercises based on muscle group, difficulty, or equipment needed, and quickly add them to your plan.
+- Public Blog: Stay motivated and informed with articles on fitness, nutrition, and wellness. Our blog is updated regularly to keep you engaged with relevant, high-quality content.
+- User-Friendly Interface: Designed to make planning workouts simple and efficient, even on the go.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Run the app here: 
