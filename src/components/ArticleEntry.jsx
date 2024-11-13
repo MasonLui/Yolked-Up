@@ -1,45 +1,37 @@
-import { useState } from "react"
-
+// ArticleEntry.jsx
 export default function ArticleEntry({ mode, addArticle, editArticle, article, user }) {
-  const [title, setTitle] = useState(article ? article.title : '')
-  const [body, setBody] = useState(article ? article.body : '')
-  const [error, setError] = useState(null)
-
-  function submit(e) {
-    setError(null)
-    e.preventDefault()
-    if (!title.trim() || !body.trim()) {
-      setError("Both the title and body must be supplied")
-    } else {
-      const id = article ? article.id : null
-      switch (mode) {
-        case 'add':
-          addArticle({ title, body })
-          break;
-        case 'edit':
-          editArticle({ id, title, body, user })
-          break;
-      }
-    }
-  }
+  const [title, setTitle] = useState(article ? article.title : '');
+  const [body, setBody] = useState(article ? article.body : '');
+  const [error, setError] = useState(null);
 
   return (
-    <div>
-      <form className="flex flex-col" onSubmit={submit}>
-        {error && <p className="text-dark">{error}</p>}
-        Title
-        <input className="m-2" name='Title' value={title} onChange={(e) => setTitle(e.target.value)} />
-        Body
+    <div className="bg-card p-6 rounded-lg shadow-lg">
+      <form onSubmit={(e) => submit(e)} className="flex flex-col">
+        {error && <p className="text-red-500">{error}</p>}
+        
+        <label className="text-lightText">Title</label>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="bg-background p-2 rounded-md mb-4 text-white"
+        />
+
+        <label className="text-lightText">Body</label>
         <textarea
-          className="m-2"
-          name='Body'
-          rows="8"
           value={body}
           onChange={(e) => setBody(e.target.value)}
-        ></textarea>
-        {mode == 'add' && <button className="py-1 px-2 text-white bg-dark hover:bg-gray-300 rounded-md border-white border-2" type="submit">Create</button>}
-        {mode == 'edit' && <button className="py-1 px-2 text-white bg-dark hover:bg-gray-300 rounded-md border-white border-2" type="submit">Update</button>}
+          rows="6"
+          className="bg-background p-2 rounded-md mb-4 text-white"
+        />
+
+        <button
+          type="submit"
+          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          {mode === 'add' ? 'Create' : 'Update'} Article
+        </button>
       </form>
     </div>
-  )
+  );
 }

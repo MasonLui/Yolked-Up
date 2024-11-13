@@ -1,14 +1,21 @@
+// Nav.jsx
 export default function Nav({ articles, setArticle }) {
-    return (
-      <nav className="bg-dark min-h-screen w-full p-5 list-disc">
-        <h1 className="text-white text-xl font-semibold mb-2">Latest Posts</h1>
-        {!articles
-          ? <p>No posts.</p>
-          : articles.map((a) => (
-              <li className="text-white hover:underline" key={a.id} onClick={() => setArticle(a)}>
-                {a.title}
-              </li>
-            ))}
-      </nav>
-    )
-  }
+  return (
+    <nav className="bg-card min-h-screen w-full p-5">
+      <h2 className="text-primary text-xl font-bold mb-4">Latest Posts</h2>
+      {articles.length === 0 ? (
+        <p className="text-lightText">No posts available.</p>
+      ) : (
+        articles.map((article) => (
+          <li
+            key={article.id}
+            className="text-white hover:underline cursor-pointer"
+            onClick={() => setArticle(article)}
+          >
+            {article.title}
+          </li>
+        ))
+      )}
+    </nav>
+  );
+}
