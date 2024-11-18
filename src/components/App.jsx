@@ -1,6 +1,6 @@
 // App.jsx
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Article from "./Article";
 import ArticleEntry from "./ArticleEntry";
@@ -166,7 +166,6 @@ export default function App() {
         <main className="flex-1 p-8">
           {activeTab === "Articles" && (
             <div>
-              <h2 id="latest-posts-title" className="text-2xl font-semibold text-primary text-ripple">Latest Posts</h2>
               <div className="grid grid-cols-2 gap-4">
                 <Nav articles={articles} setArticle={setArticle} />
                 {mode ? (
@@ -181,9 +180,6 @@ export default function App() {
                   <Article article={article} />
                 )}
               </div>
-              {articles.length === 0 && (
-                <p id="no-posts-message" className="text-ripple">No posts available</p>
-              )}
             </div>
           )}
           {activeTab === "WorkoutLog" && (
@@ -199,7 +195,7 @@ export default function App() {
             </div>
           )}
           {!article && (
-            <p id="no-post-selected" className="text-ripple">No post selected.</p>
+            <p></p>
           )}
         </main>
       </div>
