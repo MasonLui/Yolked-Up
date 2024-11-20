@@ -61,48 +61,44 @@ export default function App() {
       return;
     }
 
-    createArticle({ title, body, user })
-      .then((newArticle) => {
-        setArticle(newArticle);
-        setArticles([newArticle, ...articles]);
-        setMode(false);
-      })
+    createArticle({ title, body, user }).then((article) => {
+      setArticle(article)
+      setArticles([article, ...articles])
+      setMode('')
+    })
       .catch((error) => {
         console.error("Error creating article:", error);
       });
   }
 
   function delArticle() {
-    deleteArticle(article)
-      .then((id) => {
-        setArticle(null);
-        setArticles(articles.filter((item) => item.id !== id));
-      })
+    deleteArticle({ article }).then((id) => {
+      setArticle(null)
+      setArticles(articles.filter((item) => {return (item.id != id)}))
+    })
       .catch((error) => {
         console.error("Error deleting article:", error);
       });
   }
 
-  function editArticle({ id, title, body }) {
-    updateArticle({ id, title, body, user })
-      .then((updatedArticle) => {
-        setArticle(updatedArticle);
-        const otherArticles = articles.filter((item) => item.id !== updatedArticle.id);
-        setArticles([updatedArticle, ...otherArticles]);
-        setMode('');
-      })
+  function editArticle({ id, title, body, user }) {
+    updateArticle({ id, title, body, user }).then((article) => {
+      setArticle(article)
+      const otherArticles = articles.filter((item) => {return (item.id != article.id)})
+      setArticles([article, ...otherArticles])
+      setMode('')
+    })
       .catch((error) => {
         console.error("Error updating article:", error);
       });
   }
 
   return (
-    <div className="min-h-screen bg-background text-whiteText flex flex-col">
+    <div className="min-h-screen bg-background text-whiteText">
       {/* Header */}
-      <header className="bg-background p-5 text-center">
-        <h1 id="yolked-up-title" className="text-4xl font-bold text-primary text-ripple">Yolked-Up</h1>
+      <header className="p-5 flex justify-center">
+        <h1 className="text-4xl font-bold text-primary text-ripple">Yolked-Up</h1>
       </header>
-
       {/* Tabs with Text Ripple Effect */}
       <div className="flex justify-center bg-card p-4 space-x-4">
         <button 
@@ -165,20 +161,22 @@ export default function App() {
         {/* Main Content Area */}
         <main className="flex-1 p-8">
           {activeTab === "Articles" && (
-            <div>
+            <div className="w-full">
               <div className="grid grid-cols-2 gap-4">
                 <Nav articles={articles} setArticle={setArticle} />
-                {mode ? (
-                  <ArticleEntry
-                    mode={mode}
-                    addArticle={addArticle}
-                    editArticle={editArticle}
-                    article={mode === 'edit' ? article : null}
-                    user={user}
-                  />
+                <div className="h-full">
+                  {mode ? (
+                    <ArticleEntry
+                      mode={mode}
+                      addArticle={addArticle}
+                      editArticle={editArticle}
+                      article={mode === 'edit' ? article : null}
+                      user={user}
+                    />
                 ) : (
                   <Article article={article} />
                 )}
+                </div>
               </div>
             </div>
           )}
