@@ -2,7 +2,7 @@
 
 Welcome to Yolked-Up – your go-to workout platform for organizing and tracking your fitness journey! With Yolked-Up, you can efficiently plan your daily workouts, discover new exercises, and stay motivated through our community blog. 
 
-Fitness enthusiasts are motivated individuals who needs a way to plan and track their workouts efficiently because they value progress, organization, and community-driven inspiration. Yolked-Up is a fitness app which can help these people organize and track their workouts so that they can stay consistent, discover new exercises, and feel motivated through community support.
+Fitness enthusiasts are motivated individuals who need ways to plan and track their workouts efficiently because they value progress, organization, and community-driven inspiration. Yolked-Up is a fitness app which can help these people organize and track their workouts so that they can stay consistent, discover new exercises, and feel motivated through community support.
 
 # Features
 - Personalized Workout Planning: Organize your daily workouts by selecting exercises from our extensive library or by adding custom - - workouts.
