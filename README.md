@@ -1,6 +1,6 @@
-# Yulked-up
+# Yolked-up
 
-Welcome to Yulked-Up – your go-to workout platform for organizing and tracking your fitness journey! With Yulked-Up, you can efficiently plan your daily workouts, discover new exercises, and stay motivated through our community blog. 
+Welcome to Yolked-Up – your go-to workout platform for organizing and tracking your fitness journey! With Yolked-Up, you can efficiently plan your daily workouts, discover new exercises, and stay motivated through our community blog. 
 
 # Features
 - Personalized Workout Planning: Organize your daily workouts by selecting exercises from our extensive library or by adding custom - - workouts.
