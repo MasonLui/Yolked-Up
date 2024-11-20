@@ -25,7 +25,11 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+<<<<<<< HEAD
     "tailwindcss": "^3.4.15",
+=======
+    "tailwindcss": "^3.4.14",
+>>>>>>> 070e8075a733b0b5ff4be2ab4b379d92f6487202
     "vite": "^5.4.10"
   }
 }
