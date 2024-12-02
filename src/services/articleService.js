@@ -1,5 +1,3 @@
-// articleService.js
-
 import { db } from "../firebaseConfig"
 import {
   collection,

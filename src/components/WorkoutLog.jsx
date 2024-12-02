@@ -1,4 +1,3 @@
-// WorkoutLog.jsx
 import WorkoutCard from './WorkoutCard';
 
 export default function WorkoutLog() {

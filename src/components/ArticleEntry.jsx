@@ -1,4 +1,3 @@
-// ArticleEntry.jsx
 import { useState } from "react"
 
 export default function ArticleEntry({ mode, addArticle, editArticle, article, user }) {

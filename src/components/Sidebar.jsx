@@ -1,4 +1,3 @@
-// Sidebar.jsx
 export default function Sidebar() {
     return (
       <nav className="bg-card min-h-screen w-16 flex flex-col items-center py-4">

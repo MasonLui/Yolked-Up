@@ -1,10 +1,9 @@
-// App.jsx
-
 import React, { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Article from "./Article";
 import ArticleEntry from "./ArticleEntry";
 import WorkoutLog from "./WorkoutLog";
+import Profile from "./Profile";
 import { SignIn, SignOut } from "./Auth";
 import { useAuthentication, loggedInUserDisplayName } from "../services/authService";
 import { fetchArticles, createArticle, deleteArticle, updateArticle } from "../services/articleService";
@@ -16,7 +15,12 @@ export default function App() {
   const [mode, setMode] = useState(false);
   const [activeTab, setActiveTab] = useState("Articles");
   const user = useAuthentication();
-
+  
+  const handleLogNewRecord = () => {
+    console.log("Log New Record button clicked!");
+    // Add additional functionality here
+  };
+  
   // Function to add the ripple effect to text elements
   function addTextRipple(elementId) {
     const element = document.getElementById(elementId);
@@ -153,7 +157,7 @@ export default function App() {
               )}
             </>
           ) : (
-            <SignIn />
+            < SignIn />
           )}
           <SignOut />
         </nav>
@@ -186,10 +190,12 @@ export default function App() {
             </div>
           )}
           {activeTab === "Profile" && (
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold text-primary">Profile</h2>
-              <p>Welcome, {user ? loggedInUserDisplayName() : "Guest"}!</p>
-              <p>This section can display user details, settings, and more.</p>
+            <div>
+              <Profile
+              user={user}
+              loggedInUserDisplayName={loggedInUserDisplayName}
+              handleLogNewRecord={handleLogNewRecord}
+              />
             </div>
           )}
           {!article && (

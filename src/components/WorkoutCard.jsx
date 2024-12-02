@@ -1,4 +1,3 @@
-// WorkoutCard.jsx
 export default function WorkoutCard({ workout }) {
     return (
       <div className="bg-card p-6 rounded-lg shadow-lg mb-4">
