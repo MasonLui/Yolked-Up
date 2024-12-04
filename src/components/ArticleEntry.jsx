@@ -46,7 +46,7 @@ export default function ArticleEntry({ mode, addArticle, editArticle, article, u
 
         <button
           type="submit"
-          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-200"
+          className="bg-primary text-white px-4 py-2 rounded-md hover:bg-orange-300 transition duration-200"
         >
           {mode === 'add' ? 'Create' : 'Update'} Article
         </button>

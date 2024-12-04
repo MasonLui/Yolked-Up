@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         background: '#1C1C1E',
-        primary: '#0A84FF',
+        primary: '#FFA500', //orange
         card: '#2C2C2E',
         darkGray: '#4B5563',
         lightGray: '#9CA3AF',
-        whiteText: '#FFFFFF',
+        whiteText: '#D1D7E0',
       },
     },
   },

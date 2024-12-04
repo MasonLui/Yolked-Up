@@ -53,7 +53,7 @@ export default function ExerciseList() {
         />
         <button
           type="submit"
-          className="w-full bg-primary text-white py-2 rounded-md hover:bg-blue-700 transition duration-200"
+          className="w-full bg-primary text-white py-2 rounded-md hover:bg-orange-300 transition duration-200"
         >
           Search Exercises
         </button>

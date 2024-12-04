@@ -93,7 +93,7 @@ export default function WorkoutLog() {
           onChange={handleInputChange}
           className="border p-2 mr-2 text-black"
         />
-        <button onClick={addWorkout} className="bg-blue-500 text-white p-2">
+        <button onClick={addWorkout} className="bg-primary text-white p-2 rounded-md">
           Add Workout
         </button>
       </div>
