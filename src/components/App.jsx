@@ -145,43 +145,42 @@ export default function App() {
           Exercises
         </button>
       </div>
-
-      <div className="flex flex-1 p-8">
+        <SignOut />
+      <div className="flex flex-1 ml-8">
         {/* Sidebar for Additional Controls */}
         <nav className="bg-card min-h-screen w-1/5 flex flex-col items-center p-4">
           {user ? (
             <>
               <button
-                className="text-primary mb-4 hover:scale-110 transition-transform duration-200"
+                className="bg-primary text-white p-2 m-2 rounded-md"
                 onClick={() => setMode("add")}
               >
                 New Post
               </button>
               {article && user.uid === article.author.id && (
-                <>
+                <div>
                   <button
-                    className="text-primary mb-4 hover:scale-110 transition-transform duration-200"
+                    className="bg-primary text-white p-2 m-2 rounded-md"
                     onClick={() => setMode("edit")}
                   >
                     Edit Post
                   </button>
                   <button
-                    className="text-primary hover:scale-110 transition-transform duration-200"
+                    className="bg-primary text-white p-2 m-2 rounded-md"
                     onClick={delArticle}
                   >
                     Delete Post
                   </button>
-                </>
+                </div>
               )}
             </>
           ) : (
             <SignIn />
           )}
-          <SignOut />
         </nav>
 
         {/* Main Content Area */}
-        <main className="flex-1 p-8">
+        <main className="flex-1 ml-8">
           {activeTab === "Articles" && (
             <div className="w-full">
               <div className="grid grid-cols-2 gap-4">

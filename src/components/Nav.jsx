@@ -1,4 +1,3 @@
-// Nav.jsx
 export default function Nav({ articles, setArticle }) {
   return (
     <nav className="bg-card min-h-screen w-full p-5">

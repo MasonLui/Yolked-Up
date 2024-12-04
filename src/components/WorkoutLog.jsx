@@ -67,7 +67,7 @@ export default function WorkoutLog() {
           placeholder="Workout Name"
           value={newWorkout.name}
           onChange={handleInputChange}
-          className="border p-2 mr-2 rounded p-2 text-black"
+          className="border p-2 m-2 rounded p-2 text-black"
         />
         <input
           type="number"
@@ -75,7 +75,7 @@ export default function WorkoutLog() {
           placeholder="Sets"
           value={newWorkout.sets}
           onChange={handleInputChange}
-          className="border p-2 rounded p-2 mr-2 text-black"
+          className="border p-2 rounded p-2 m-2 text-black"
         />
         <input
           type="number"
@@ -83,7 +83,7 @@ export default function WorkoutLog() {
           placeholder="Reps"
           value={newWorkout.reps}
           onChange={handleInputChange}
-          className="border p-2 rounded p-2 mr-2 text-black"
+          className="border p-2 rounded p-2 m-2 text-black"
         />
         <input
           type="number"
@@ -91,9 +91,9 @@ export default function WorkoutLog() {
           placeholder="Weight (lbs)"
           value={newWorkout.weight}
           onChange={handleInputChange}
-          className="border p-2 rounded p-2 mr-2 text-black"
+          className="border p-2 rounded p-2 m-2 text-black"
         />
-        <button onClick={addWorkout} className="bg-primary text-white p-2 rounded-md">
+        <button onClick={addWorkout} className="bg-primary text-white p-2 m-2 rounded-md">
           Add Workout
         </button>
       </div>
