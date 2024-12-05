@@ -1,5 +1,3 @@
-import yolkedup from '../yolkedup.jpg';
-import yolkedupCopy from '../yolkedup copy.jpg';
  Header.jsx
 export default function Header() {
   return (
