@@ -184,7 +184,7 @@ export default function App() {
         {/* Main Content Area */}
         <main className="flex-1 ml-8">
           {activeTab === "Articles" && (
-            <div className="w-full rounded-md">
+            <div className="w-full">
               <div className="grid grid-cols-2 gap-4">
                 <Nav articles={articles} setArticle={setArticle} />
                 <div className="h-full">
