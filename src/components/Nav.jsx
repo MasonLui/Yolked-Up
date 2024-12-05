@@ -1,6 +1,6 @@
 export default function Nav({ articles, setArticle }) {
   return (
-    <nav className="bg-card min-h-screen w-full p-5">
+    <nav className="bg-card min-h-screen w-full rounded-md p-5">
       <h2 className="text-primary text-xl font-bold mb-4">Latest Posts</h2>
       {articles.length === 0 ? (
         <p className="text-lightText">No posts available.</p>

@@ -39,7 +39,7 @@ export default function ExerciseList() {
   };
 
   return (
-    <div className="p-5 bg-card rounded-md shadow-lg">
+    <div className="p-5 bg-card rounded-md mr-8 shadow-lg">
       <h2 className="text-2xl text-primary font-bold mb-4">Exercise List</h2>
 
       {/* Muscle Group Search */}

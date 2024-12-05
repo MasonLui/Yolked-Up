@@ -150,7 +150,7 @@ export default function App() {
         <SignOut />
       <div className="flex flex-1 ml-8">
         {/* Sidebar for Additional Controls */}
-        <nav className="bg-card min-h-screen w-1/5 flex flex-col items-center p-4">
+        <nav className="bg-card min-h-screen w-1/5 flex flex-col rounded-md items-center p-4">
           {user ? (
             <>
               <button
@@ -184,7 +184,7 @@ export default function App() {
         {/* Main Content Area */}
         <main className="flex-1 ml-8">
           {activeTab === "Articles" && (
-            <div className="w-full">
+            <div className="w-full rounded-md">
               <div className="grid grid-cols-2 gap-4">
                 <Nav articles={articles} setArticle={setArticle} />
                 <div className="h-full">
