@@ -104,6 +104,7 @@ export default function App() {
     <div className="min-h-screen bg-background text-whiteText">
       {/* Header */}
       <header className="p-5 flex justify-center">
+        
         <h1 className="text-4xl font-bold text-primary text-ripple">Yolked-Up</h1>
       </header>
       {/* Tabs with Text Ripple Effect */}
