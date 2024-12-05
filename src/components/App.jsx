@@ -103,9 +103,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-whiteText">
       {/* Header */}
-      <header className="p-5 flex justify-center">
-        
+      <header className="p-5 flex justify-center gap-4">
+        <img src="/egg.png" alt="egg" className="w-12 h-12 relative -translate-y-1"/>
         <h1 className="text-4xl font-bold text-primary text-ripple">Yolked-Up</h1>
+        <img src="/arm.png" alt="egg" className="w-12 h-12 relative -translate-y-1"/>
       </header>
       {/* Tabs with Text Ripple Effect */}
       <div className="flex justify-center bg-card p-4 space-x-4">
