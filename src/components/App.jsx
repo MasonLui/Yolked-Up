@@ -95,22 +95,22 @@ export default function App() {
 
       {/* Tabs Section with Login */}
       <div className="bg-card py-1">
-        <div className="flex justify-center items-center space-x-3">
+        <div className="flex justify-around items-center space-x-3">
           <button
             id="tab-Articles"
             onClick={() => handleTabClick("Articles")}
-            className={`py-1 px-3 text-sm font-medium rounded transition-all duration-300 ${
+            className={`py-3 px-3 text-lg font-medium rounded transition-all duration-300 ${
               activeTab === "Articles"
                 ? "bg-primary text-white"
                 : "text-lightGray hover:text-white"
             }`}
           >
-            Articles
+            Posts
           </button>
           <button
             id="tab-WorkoutLog"
             onClick={() => handleTabClick("WorkoutLog")}
-            className={`py-1 px-3 text-sm font-medium rounded transition-all duration-300 ${
+            className={`py-3 px-3 text-lg font-medium rounded transition-all duration-300 ${
               activeTab === "WorkoutLog"
                 ? "bg-primary text-white"
                 : "text-lightGray hover:text-white"
@@ -121,7 +121,7 @@ export default function App() {
           <button
             id="tab-Profile"
             onClick={() => handleTabClick("Profile")}
-            className={`py-1 px-3 text-sm font-medium rounded transition-all duration-300 ${
+            className={`py-3 px-3 text-lg font-medium rounded transition-all duration-300 ${
               activeTab === "Profile"
                 ? "bg-primary text-white"
                 : "text-lightGray hover:text-white"
@@ -132,7 +132,7 @@ export default function App() {
           <button
             id="tab-Exercises"
             onClick={() => handleTabClick("Exercises")}
-            className={`py-1 px-3 text-sm font-medium rounded transition-all duration-300 ${
+            className={`py-3 px-3 text-lg font-medium rounded transition-all duration-300 ${
               activeTab === "Exercises"
                 ? "bg-primary text-white"
                 : "text-lightGray hover:text-white"

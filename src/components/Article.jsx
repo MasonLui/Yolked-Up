@@ -2,7 +2,13 @@ export default function Article({ article }) {
   return (
     <article className="p-5 ">
       {!article ? (
-        <p>No post selected.</p>
+        <div className="flex justify-center items-center">
+          <img
+            src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg" 
+            alt="No post selected"
+            className="max-w-full h-auto"
+          />
+        </div>
       ) : (
         <section >
           <h2 className="text-primary text-xl font-bold mb-2">{article.title}</h2>
